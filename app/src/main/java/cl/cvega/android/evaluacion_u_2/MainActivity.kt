@@ -216,7 +216,7 @@ fun AppHomeUI(
 
 
 
-//@Preview(showSystemUi = true)
+@Preview(showSystemUi = true)
 @Composable
 fun ConfigPageUI(
     onBackButtonClicked: () -> Unit

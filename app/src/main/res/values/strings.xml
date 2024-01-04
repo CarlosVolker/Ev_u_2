@@ -1,13 +1,10 @@
 <resources>
     <string name="app_name">Evaluacion_U_2</string>
     <string name="compra_form_ejemplo">Harina</string>
-    <string name="producto_form_agregar" >Agregar</string>
+    <string name="producto_form_agregar">Agregar</string>
     <string name="logo">Logo</string>
-
     <string name="text_lista_compra">Listado Compras</string>
-
     <string name="text_config">Configuración</string>
-
     <string name="producto_form_eliminar">Eliminar</string>
     <string name="text_ordenar_config">Ordenar alfabéticamente</string>
     <string name="text_mostrar_items_comprar_config">Mostrar primero items por comprar</string>

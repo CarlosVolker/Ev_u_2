@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Test U 2</string>
+    <string name="app_name">Evaluacion_U_2</string>
     <string name="compra_form_ejemplo">Flour</string>
     <string name="producto_form_agregar" >Add</string>
     <string name="logo">Logo</string>
