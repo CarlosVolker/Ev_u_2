@@ -1,8 +1,10 @@
 package cl.cvega.android.evaluacion_u_2.ui.vm
 
+import android.content.Context
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import cl.cvega.android.evaluacion_u_2.R
 import cl.cvega.android.evaluacion_u_2.data.ComprasRepository
 import cl.cvega.android.evaluacion_u_2.data.modelo.Compra
 import cl.cvega.android.evaluacion_u_2.ui.state.ComprasUIState
@@ -43,6 +45,7 @@ class ComprasViewModel (
     }
 
     private fun obtenerCompras(){
+
         job?.cancel()
         job = viewModelScope.launch {
             val comprasStream = comprasRepository.getComprasStream()
@@ -61,6 +64,7 @@ class ComprasViewModel (
         job = viewModelScope.launch {
             val c = Compra(UUID.randomUUID().toString(), compra)
             comprasRepository.insertar(c)
+
             _uiState.update {
                 it.copy(mensaje = "Compra agregada: ${c.descripcion}")
             }

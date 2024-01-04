@@ -11,4 +11,5 @@
     <string name="producto_form_eliminar">Detele</string>
     <string name="text_ordenar_config">Order alphabetically</string>
     <string name="text_mostrar_items_comprar_config">Show items to buy first</string>
+    <string name="compra_agregada">Added purchase: %s</string>
 </resources>
