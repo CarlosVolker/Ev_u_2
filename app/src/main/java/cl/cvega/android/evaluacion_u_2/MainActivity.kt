@@ -222,7 +222,6 @@ fun AppHomeUI(
 fun ConfigPageUI(
     onBackButtonClicked: () -> Unit ={}
 ) {
-    //ConfigPageUI(onBackButtonClicked = onBackButtonClicked)
     val contexto = LocalContext.current
     var seDebeOrdenarAlfab by rememberSaveable {
         mutableStateOf(false)
