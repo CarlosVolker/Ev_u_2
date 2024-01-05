@@ -1,6 +1,5 @@
 package cl.cvega.android.evaluacion_u_2
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -27,6 +26,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -143,7 +143,7 @@ fun AppEvaluacionTopBar(
     )
 }
 
-@Preview(showSystemUi = true, locale = "en")
+@Preview(showSystemUi = true)
 @Composable
 fun AppHomeUI(
     comprasVm: ComprasViewModel = viewModel(),
@@ -220,7 +220,7 @@ fun AppHomeUI(
 @Preview(showSystemUi = true)
 @Composable
 fun ConfigPageUI(
-    onBackButtonClicked: () -> Unit
+    onBackButtonClicked: () -> Unit ={}
 ) {
     //ConfigPageUI(onBackButtonClicked = onBackButtonClicked)
     val contexto = LocalContext.current
@@ -340,11 +340,12 @@ fun CompraListaUI(
         }
     }
 }
-
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CompraListaItemUI(
     compra: Compra,
-    onDelete: (c: Compra) -> Unit
+    onDelete: (c: Compra) -> Unit,
+    isChecked: Boolean = false
 ){
     val contexto = LocalContext.current
     val textoEliminarCompra = contexto.getString(R.string.producto_form_eliminar)
@@ -359,6 +360,12 @@ fun CompraListaItemUI(
                 modifier = Modifier
                     .weight(2.0f)
                     .padding(10.dp, 8.dp)
+
+            )
+            Checkbox(
+                checked = isChecked,
+                onCheckedChange = { },
+                modifier = Modifier.padding(4.dp)
             )
             IconButton(onClick = {
                 Log.v("CompraListaItemUI::IconButton", "onClick DELETE")
