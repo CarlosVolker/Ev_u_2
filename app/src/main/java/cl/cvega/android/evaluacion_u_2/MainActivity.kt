@@ -45,6 +45,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -344,10 +345,11 @@ fun CompraListaUI(
 fun CompraListaItemUI(
     compra: Compra,
     onDelete: (c: Compra) -> Unit,
-    isChecked: Boolean = false
+    //isChecked: Boolean = false
 ){
     val contexto = LocalContext.current
     val textoEliminarCompra = contexto.getString(R.string.producto_form_eliminar)
+    var isChecked by remember { mutableStateOf(false)    }
 
     Column {
         Row (
@@ -363,7 +365,7 @@ fun CompraListaItemUI(
             )
             Checkbox(
                 checked = isChecked,
-                onCheckedChange = { },
+                onCheckedChange = { isChecked = it },
                 modifier = Modifier.padding(4.dp)
             )
             IconButton(onClick = {
