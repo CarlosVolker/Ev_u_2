@@ -216,8 +216,6 @@ fun AppHomeUI(
     }
 }
 
-
-
 @Preview(showSystemUi = true)
 @Composable
 fun ConfigPageUI(

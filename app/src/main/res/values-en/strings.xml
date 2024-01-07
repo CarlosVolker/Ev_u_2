@@ -4,10 +4,8 @@
     <string name="compra_form_ejemplo">Flour</string>
     <string name="producto_form_agregar" >Add</string>
     <string name="logo">Logo</string>
-
     <string name="text_lista_compra">Shopping List</string>
     <string name="text_config">Setting</string>
-
     <string name="producto_form_eliminar">Detele</string>
     <string name="text_ordenar_config">Order alphabetically</string>
     <string name="text_mostrar_items_comprar_config">Show items to buy first</string>
